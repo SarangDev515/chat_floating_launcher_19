@@ -1,0 +1,84 @@
+.o_chat_request {
+    margin: 8px 0;
+    padding: 13px 15px;
+    border: 1px solid rgba(135, 90, 123, 0.25);
+    border-left: 4px solid #875a7b;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(40, 35, 45, 0.08);
+
+    .o_chat_request_header {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 7px;
+        color: #875a7b;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: .04em;
+
+        .o_chat_request_status {
+            margin-left: auto;
+            padding: 2px 7px;
+            border-radius: 20px;
+            color: #fff;
+            background: #6c757d;
+            font-size: 10px;
+            letter-spacing: 0;
+            text-transform: none;
+        }
+    }
+
+    .o_chat_request_title {
+        margin-bottom: 5px;
+        color: #212529;
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    .o_chat_request_description {
+        color: #495057;
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+    }
+
+    .o_chat_request_meta,
+    .o_chat_request_reason {
+        margin-top: 8px;
+        color: #6c757d;
+        font-size: 12px;
+    }
+
+    .o_chat_request_actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 12px;
+    }
+
+    &.o_chat_request_approved {
+        border-left-color: #198754;
+        .o_chat_request_status { background: #198754; }
+    }
+
+    &.o_chat_request_rejected {
+        border-left-color: #dc3545;
+        .o_chat_request_status { background: #dc3545; }
+    }
+
+    &.o_chat_request_cancelled {
+        border-left-color: #6c757d;
+        .o_chat_request_status { background: #6c757d; }
+    }
+}
+
+.o_chat_request_form,
+.o_chat_request_decision_form {
+    width: 100%;
+    max-width: 540px;
+}
+
+.o_chat_request_form textarea,
+.o_chat_request_decision_form textarea {
+    resize: vertical;
+}
