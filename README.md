@@ -2,6 +2,13 @@
 
 Odoo 19 port of the floating Discuss launcher and direct chat-request workflow.
 
+## Download Odoo 19 addon
+
+- [Download the v19.0.1.0.0 release ZIP](https://github.com/SarangDev515/chat_floating_launcher_19/archive/refs/tags/v19.0.1.0.0.zip)
+- [Open the GitHub release page](https://github.com/SarangDev515/chat_floating_launcher_19/releases/tag/v19.0.1.0.0)
+- [Browse the odoo-19 source branch](https://github.com/SarangDev515/chat_floating_launcher_19/tree/odoo-19)
+
+
 ## Features
 
 - Moves the standard Discuss systray menu to a responsive bottom-right launcher.
