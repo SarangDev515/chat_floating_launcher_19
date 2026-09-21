@@ -1,0 +1,96 @@
+// Odoo 19 floating Discuss launcher. The original systray component stays intact;
+// only its presentation is moved so Odoo's native data and actions remain active.
+.o-mail-DiscussSystray-class {
+    position: fixed !important;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1040;
+
+    > button {
+        position: relative;
+        width: 58px !important;
+        height: 58px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        border: 0;
+        border-radius: 50% !important;
+        color: #fff;
+        background: #875a7b !important;
+        box-shadow: 0 6px 18px rgba(44, 40, 54, 0.28);
+        transition: transform 160ms ease, box-shadow 160ms ease;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 9px 22px rgba(44, 40, 54, 0.34);
+        }
+
+        .fa-comments {
+            font-size: 21px;
+        }
+    }
+
+    .o-mail-MessagingMenu-counter {
+        position: absolute;
+        top: -3px;
+        right: -3px;
+        min-width: 21px;
+        min-height: 21px;
+        padding: 2px 5px;
+        border: 2px solid #fff;
+        color: #fff;
+        background: #dc3545;
+        font-size: 11px;
+        line-height: 15px;
+    }
+}
+
+.o-mail-DiscussSystray {
+    position: fixed !important;
+    right: 18px;
+    bottom: 91px;
+    width: 420px;
+    max-width: calc(100vw - 36px);
+    max-height: calc(100vh - 120px);
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 12px 36px rgba(35, 31, 42, 0.25);
+
+    .o-mail-MessagingMenu {
+        max-height: calc(100vh - 120px);
+    }
+
+    .o-mail-MessagingMenu-list {
+        min-height: 80px;
+        max-height: calc(100vh - 205px);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .o-mail-DiscussSystray-class {
+        right: 16px;
+        bottom: 16px;
+
+        > button {
+            width: 54px;
+            height: 54px;
+        }
+    }
+
+    .o-mail-DiscussSystray {
+        right: 8px;
+        bottom: 78px;
+        left: 8px;
+        width: auto;
+        max-height: calc(100vh - 94px);
+        border-radius: 14px;
+
+        .o-mail-MessagingMenu-list {
+            max-height: calc(100vh - 165px);
+        }
+    }
+}
